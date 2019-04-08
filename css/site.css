@@ -1,0 +1,51 @@
+body {
+    background-color: lightblue;
+}
+
+.jumbotron, .list-group-item, .explanation-container {
+    background-color: #e6bfad;
+    font-weight: lighter;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.list-group-item {
+    display: none;
+    list-style: none
+}
+
+h1 {
+    padding: 15px;
+    text-align: center;
+}
+
+#check {
+    margin-left: 10px;
+}
+
+.search {
+    margin-bottom: 16px;
+}
+
+
+.results-container {
+    margin-bottom: 32px;
+    display: none;
+}
+
+.results {
+    margin-bottom: 10px;
+    border-radius: .3rem;
+}
+
+.explanation-container {
+    border-radius: .3rem;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+#explanation {
+    text-align: center;
+}
+
+#response {
+    line-height: 1.2;
+}

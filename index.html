@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <title>Check je Bonque-ers!</title>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="jumbotron">
+            <h1>Check je Bonque-ers!</h1>
+            <p class="lead">Bonque, een van de vele recruitment bedrijven die dit land rijk is, maakt op hun website accounts aan voor mogelijke kandidaten, zonder toestemming.</p>
+            <hr class="my-4">
+            <p>Dit is al niet erg netjes, maar wordt erger gemaakt door het feit dat via een formulier op hun website makkelijk te achterhalen is of voor een bepaald email-adres een account bestaat, en of die gebruikt wordt door de eigenaar van dat adres.</p>
+            <p>Dus: heb je wel eens contact gehad met Bonque, of heb je een andere reden om te denken dat ze een account voor je aan hebben gemaakt, hieronder kan je makkelijk controleren of dat het geval is.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center search">
+        <div class="col-8">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Email-adres" aria-label="Recipient's username" aria-describedby="button-addon" id="email">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="check" onclick="checkEmail()">Check</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center results-container">
+        <div class="col-12">
+            <ul class="list-group results">
+                <li class="list-group-item" id="nope">Er bestaat voor dit emailadres geen account.</li>
+                <li class="list-group-item" id="bonque">Er bestaat voor dit emailadres een account, maar is hoogstwaarschijnlijk aangemaakt door Bonque en niet de eigenaar van het emailadres.</li>
+                <li class="list-group-item" id="verified">Er bestaat voor dit email adres een account dat ook via mail geverifieerd is.</li>
+                <li class="list-group-item" id="used">Er bestaat voor dit email adres een account, en is minstens 1x gebruikt om in te loggen.</li>
+                <li class="list-group-item" id="deleted">Voor het aangegeven emailadres is een verwijderingsverzoek ontvangen en zal binnen korte tijd verwijderd worden.</li>
+                <li class="list-group-item" id="explanation">
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsible" aria-expanded="false" aria-controls="collapsible">
+                        Toon uitleg
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 explanation-container collapse" id="collapsible">
+            <p>Via onder andere de "Inlog" en "Wachtwoord vergeten" formulieren op de Bonque website worden er requests gestuurd die informatie opvragen over een emailadres. De reactie hierop bevat een aantal variabelen die aantonen of er een account bij het emailadres hoort, en hoe deze gebruikt wordt. Als alleen "Exists" aangegeven wordt is de account door Bonque aangemaakt en niet gebruikt door de kandidaat. Bij "HasPassword" en "HasAcceptedPrivacyPolicy" is er door de kandidaat hoogstwaarschijnlijk ingelogd.</p>
+            <p>Dit is wat er over het gezochte emailadres bekend is:</p>
+            <pre>
+                <code id="response">
+
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/check.js"></script>
+</body>
+</html>
